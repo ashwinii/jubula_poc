@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+}
+
+group 'jubula_poc'
+sourceCompatibility = 1.8
+
+logger.quiet "Running java version: " + System.properties['java.version']
+logger.quiet "Running gradle version: $gradle.gradleVersion"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
